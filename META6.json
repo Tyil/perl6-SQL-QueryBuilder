@@ -3,6 +3,9 @@
   "depends": [
     
   ],
+  "test-depends": [
+    "JSON::Fast"
+  ],
   "description": "Nondescript",
   "license": "LGPL-3.0",
   "meta-version": 0,
