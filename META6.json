@@ -4,7 +4,7 @@
     
   ],
   "description": "Nondescript",
-  "license": "AGPL-3.0",
+  "license": "LGPL-3.0",
   "meta-version": 0,
   "name": "SQL::QueryBuilder",
   "perl": "6.c",

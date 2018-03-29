@@ -1,8 +1,5 @@
-= SQL::QueryBuilder::Abstract
+= SQL::QueryBuilder
 :toc: preamble
-
-The abstract interfaces for use with `SQL::QueryBuilder`, a database-agnostic
-query builder.
 
 == Interfaces defined
 There are different interfaces for each type of query. Each of these interfaces
