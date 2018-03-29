@@ -1,0 +1,21 @@
+{
+  "authors": "Patrick Spek <p.spek@tyil.work>",
+  "depends": [
+    
+  ],
+  "description": "Nondescript",
+  "license": "AGPL-3.0",
+  "meta-version": 0,
+  "name": "SQL::QueryBuilder",
+  "perl": "6.c",
+  "provides": {
+    "SQL::QueryBuilder": "lib/SQL/QueryBuilder.pm6"
+  },
+  "resources": [
+    
+  ],
+  "tags": [
+    
+  ],
+  "version": "0.0.0"
+}
