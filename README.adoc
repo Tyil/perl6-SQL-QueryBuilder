@@ -1,0 +1,83 @@
+= SQL::QueryBuilder::Abstract
+:toc: preamble
+
+The abstract interfaces for use with `SQL::QueryBuilder`, a database-agnostic
+query builder.
+
+== Interfaces defined
+There are different interfaces for each type of query. Each of these interfaces
+have at least a `Str` sub defined, which is the sub used to convert the object
+into the actual query. These queries can in turn be used with a database
+interfacing module, such as https://github.com/perl6/DBIish[`DBIish`].
+
+=== `SQL::QueryBuilder::Abstract::Use`
+[source,perl6]
+----
+sub db(Str:D $database --> self)
+----
+
+=== `SQL::QueryBuilder::Abstract::Insert`
+[source,perl6]
+----
+sub into(Str:D $table --> self)
+sub record(Any:D %record --> self)
+sub records(Hash:D @records --> self)
+----
+
+=== `SQL::QueryBuilder::Abstract::Select`
+[source,perl6]
+----
+sub from(Str:D $table --> self)
+sub select(Str:D $column --> self)
+sub select(Str:D *@columns --> self)
+sub select-as(Pair:D $column --> self)
+sub select-as(Pair:D *@columns --> self)
+sub where(Str:D $column, Any:D $value --> self)
+sub where(Str:D $column, Str:D $check, Any:D $value --> self)
+sub order-by(Str:D $column, Str:D $direction = "ASC" --> self)
+sub skip(Int:D $amount --> self)
+sub take(Int:D $amount --> self)
+----
+
+=== `SQL::QueryBuilder::Abstract::Update`
+[source,perl6]
+----
+sub table(Str:D $table --> self)
+sub set(Str:D $column, Any:D $value --> self)
+sub set(Pair:D *@records --> self)
+sub set(Any:D %record --> self)
+sub where(Str:D $column, Any:D $value --> self)
+sub where(Str:D $column, Str:D $check, Any:D $value --> self)
+----
+
+=== `SQL::QueryBuilder::Abstract::Delete`
+[source,perl6]
+----
+sub from(Str:D $table --> self)
+sub where(Str:D $column, Any:D $value --> self)
+sub where(Str:D $column, Str:D $check, Any:D $value --> self)
+----
+
+=== `SQL::QueryBuilder::Abstract::CreateTable`
+[source,perl6]
+----
+sub name(Str:D $table --> self)
+sub primary-key(Str:D $column --> self)
+
+# Column types
+sub str(Str:D $name, Int:D :$length = 50, Bool:D :$nullable = False, Str :$default --> self)
+sub int(Str:D $name, Bool:D :$nullable = False, Int :$default --> self)
+sub uint(Str:D $name, Bool:D :$nullable = False, Int :$default --> self)
+sub float(Str:D $name, Bool:D :$nullable = False, Num :$default --> self)
+sub date(Str:D $name, Bool:D :$nullable = False, Date :$default --> self)
+----
+
+=== `SQL::QueryBuilder::Abstract::DropTable`
+[source,perl6]
+----
+sub name(Str:D $table --> self)
+----
+
+== License
+This module is distributed under the terms of the LGPL version 3.0. See the
+`LICENSE` file in this repository for more details.
