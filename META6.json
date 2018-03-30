@@ -3,22 +3,32 @@
   "depends": [
     
   ],
-  "test-depends": [
-    "JSON::Fast"
-  ],
   "description": "Nondescript",
   "license": "LGPL-3.0",
   "meta-version": 0,
   "name": "SQL::QueryBuilder",
   "perl": "6.c",
   "provides": {
-    "SQL::QueryBuilder": "lib/SQL/QueryBuilder.pm6"
+    "SQL::QueryBuilder": "lib/SQL/QueryBuilder.pm6",
+    "SQL::QueryBuilder::Clauses::Columns": "lib/SQL/QueryBuilder/Clauses/Columns.pm6",
+    "SQL::QueryBuilder::Clauses::Limit": "lib/SQL/QueryBuilder/Clauses/Limit.pm6",
+    "SQL::QueryBuilder::Clauses::Offset": "lib/SQL/QueryBuilder/Clauses/Offset.pm6",
+    "SQL::QueryBuilder::Clauses::OrderBy": "lib/SQL/QueryBuilder/Clauses/OrderBy.pm6",
+    "SQL::QueryBuilder::Clauses::Set": "lib/SQL/QueryBuilder/Clauses/Set.pm6",
+    "SQL::QueryBuilder::Clauses::Values": "lib/SQL/QueryBuilder/Clauses/Values.pm6",
+    "SQL::QueryBuilder::Clauses::Where": "lib/SQL/QueryBuilder/Clauses/Where.pm6",
+    "SQL::QueryBuilder::Query": "lib/SQL/QueryBuilder/Query.pm6",
+    "SQL::QueryBuilder::Query::Insert": "lib/SQL/QueryBuilder/Query/Insert.pm6",
+    "SQL::QueryBuilder::Query::Select": "lib/SQL/QueryBuilder/Query/Select.pm6"
   },
   "resources": [
     
   ],
   "tags": [
     
+  ],
+  "test-depends": [
+    "JSON::Fast"
   ],
   "version": "0.0.0"
 }
