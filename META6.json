@@ -19,7 +19,8 @@
     "SQL::QueryBuilder::Clauses::Where": "lib/SQL/QueryBuilder/Clauses/Where.pm6",
     "SQL::QueryBuilder::Query": "lib/SQL/QueryBuilder/Query.pm6",
     "SQL::QueryBuilder::Query::Insert": "lib/SQL/QueryBuilder/Query/Insert.pm6",
-    "SQL::QueryBuilder::Query::Select": "lib/SQL/QueryBuilder/Query/Select.pm6"
+    "SQL::QueryBuilder::Query::Select": "lib/SQL/QueryBuilder/Query/Select.pm6",
+    "SQL::QueryBuilder::Query::Update": "lib/SQL/QueryBuilder/Query/Update.pm6"
   },
   "resources": [
     
