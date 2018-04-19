@@ -1,8 +1,6 @@
 {
   "authors": "Patrick Spek <p.spek@tyil.work>",
-  "depends": [
-    
-  ],
+  "depends": [],
   "description": "Nondescript",
   "license": "LGPL-3.0",
   "meta-version": 0,
@@ -20,14 +18,11 @@
     "SQL::QueryBuilder::Query": "lib/SQL/QueryBuilder/Query.pm6",
     "SQL::QueryBuilder::Query::Insert": "lib/SQL/QueryBuilder/Query/Insert.pm6",
     "SQL::QueryBuilder::Query::Select": "lib/SQL/QueryBuilder/Query/Select.pm6",
-    "SQL::QueryBuilder::Query::Update": "lib/SQL/QueryBuilder/Query/Update.pm6"
+    "SQL::QueryBuilder::Query::Update": "lib/SQL/QueryBuilder/Query/Update.pm6",
+    "SQL::QueryBuilder::Query::Delete": "lib/SQL/QueryBuilder/Query/Delete.pm6"
   },
-  "resources": [
-    
-  ],
-  "tags": [
-    
-  ],
+  "resources": [],
+  "tags": [],
   "test-depends": [
     "JSON::Fast"
   ],
